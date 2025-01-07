@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Header Section */
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  header nav a:hover,
+  header nav a.active {
+    background-color: #3e8e41;
+    border-radius: 5px;
+  }
+  
+  /* Main Content Styling */
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  /* Section Titles */
+  main section h1,
+  main section h2 {
+    margin-bottom: 1rem;
+    color: #4CAF50;
+  }
+  
+  main section p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  /* Team Section */
+  #team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .team-member {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden; /* Ensures no overflow from the image */
+  }
+  
+  .team-member img {
+    width: 100%; /* Makes the image responsive to container width */
+    height: auto; /* Maintains the aspect ratio */
+    /* border-radius: 40%; Circular image */
+    object-fit: cover; /* Ensures the image fills the circular area properly */
+    max-width: 150px; /* Optional: Restrict maximum size for better layout */
+    margin: 0 auto 1rem auto; /* Centers the image and adds spacing below */
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  } */
+  
+  .team-member h3 {
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .team-member p {
+    color: #666;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+  }
+  
+  footer p {
+    margin-bottom: 1rem;
+  }
+  
+  footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  footer ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  footer ul li a:hover {
+    color: #ddd;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header nav {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    #team {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .team-member {
+      width: 90%;
+    }
+  }
+  
