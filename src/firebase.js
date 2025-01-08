@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getMessaging, getToken } from 'firebase/messaging';
+import { getMessaging } from 'firebase/messaging';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCVs4YKkngz-yirDTLiu31C0uQLYPDo0Lc",
@@ -8,12 +8,13 @@ const firebaseConfig = {
     storageBucket: "pwa-project-30eab.firebasestorage.app",
     messagingSenderId: "817680852300",
     appId: "1:817680852300:web:3277939a226bc6bcda5be9"
-  };
+};
 
-// Initialize Firebase
+// Initialize Firebase app
 const firebaseApp = initializeApp(firebaseConfig);
 
-// Initialize Messaging
+// Get the messaging instance
 const messaging = getMessaging(firebaseApp);
 
-export { messaging, getToken };
+export { messaging };
+export default firebaseApp;

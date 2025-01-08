@@ -18,22 +18,7 @@ this.addEventListener('install', (event) => {
 })
 
 this.addEventListener("fetch", (event) => {
-
-    if (event.request.url === "http://localhost:3000/manifest.json") {
-        event.waitUntil(
-            this.registration.showNotification("hello",{
-                body: "hello form beyyond",
-            })
-        )
-    }
-    console.warn("url", event.request.url)
-    //    event.waitUntil(
-    //         this.registration.showNotification("hello",{
-    //             body:"hello form beyyond",
-    //         })
-    //     )
-
-
+   
     if (!navigator.onLine) {
         event.respondWith(
             caches.match(event.request).then((res) => {
@@ -46,3 +31,13 @@ this.addEventListener("fetch", (event) => {
         )
     }
 })
+
+this.addEventListener('push', event => {
+    const options = {
+      body: event.data.text(),
+      icon: '/path/to/your/icon.png', // Replace with your icon path
+    };
+    event.waitUntil(
+      this.registration.showNotification('Your App Name', options)
+    );
+  });
