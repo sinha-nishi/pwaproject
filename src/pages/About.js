@@ -7,7 +7,7 @@ const About = () => {
       {/* Header Section */}
       <header>
         <nav>
-          <a href="/">Home</a>
+          <a href="/users">User</a>
           <a href="/about" className="active">About</a>
           <a href="/contact">Contact</a>
         </nav>

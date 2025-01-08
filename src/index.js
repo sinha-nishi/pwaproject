@@ -3,8 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,6 +11,8 @@ import {
 import "./index.css";
 // import Home from "./pages/Home";
 import About from "./pages/About";
+import swDev from "./swDev";
+import Users from "./pages/Users";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     path: "about",
     element: <About/>
   },
+  {
+    path: "users",
+    element: <Users/>
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -29,7 +34,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
+swDev();
 
-serviceWorkerRegistration.register();
 
-reportWebVitals();
